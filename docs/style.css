@@ -1,0 +1,103 @@
+/* Meridian Group report theme (tokens from the Meridian Group design system) */
+:root{
+  --charcoal:#252423; --panel:#7f7f7f; --surface:#ffffff; --orange:#e66c37; --brand-orange:#ff6c0e;
+  --navy:#1f4e79; --navy-muted:#4c7194; --ink:#252423; --value:#666666; --border:#e6e6e6; --mist:#d2dce4;
+  --purple:#744ec2; --purple-light:#9071ce; --below:#fbe1d3; --row:#f4f4f4;
+  --font:"Segoe UI","Segoe UI Web (West European)",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--charcoal);color:var(--ink);font-family:var(--font)}
+.app{max-width:1312px;margin:0 auto;padding:0 16px 24px}
+button{font-family:inherit}
+button:focus-visible,summary:focus-visible,a:focus-visible{outline:2px solid var(--brand-orange);outline-offset:2px}
+
+/* page tabs */
+.tabs{display:flex;gap:4px;padding:12px 0 0;overflow-x:auto;scrollbar-width:thin}
+.tabs a{flex:none;color:#fff;text-decoration:none;font-size:14px;font-weight:600;padding:12px 16px;min-height:44px;display:flex;align-items:center;border:1px solid #4a4948;border-bottom:none;background:#33312f}
+.tabs a:hover{background:#3d3b39}
+.tabs a[aria-current="page"]{background:var(--orange);color:var(--ink);border-color:var(--orange)}
+
+/* header */
+.head{display:flex;align-items:center;gap:16px;min-height:88px;padding:8px 16px;border-top:3px solid var(--orange)}
+.logo{height:56px;width:auto}
+.title{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.page-title{color:#fff;font-size:32px;font-weight:700;line-height:40px;text-transform:uppercase}
+.sep{color:var(--mist);font-size:24px}
+.report-name{color:#fff;font-size:26px}
+.brand-logos{flex:1;display:flex;justify-content:flex-end;gap:12px;align-items:center}
+.brand-logos img{height:52px;width:auto;background:#fff;padding:4px 8px}
+.date-card{background:var(--surface);padding:8px 16px;display:flex;flex-direction:column;min-width:160px;border:1px solid var(--border)}
+.date-card .lbl{font-size:12px;color:var(--navy-muted);font-weight:600}
+.date-card .val{font-size:18px;font-weight:600}
+
+/* bands */
+.band{background:var(--panel);padding:12px 16px;margin-top:16px}
+.slicer-band{display:flex;gap:16px;flex-wrap:wrap;align-items:stretch}
+.slicers{display:flex;gap:12px;flex-wrap:wrap}
+.slicer{position:relative;background:var(--surface);border:1px solid var(--border);width:220px}
+.slicer summary{list-style:none;cursor:pointer;padding:8px 12px;min-height:56px;display:flex;flex-direction:column;justify-content:center}
+.slicer summary::-webkit-details-marker{display:none}
+.slicer .s-lbl{font-size:12px;color:var(--navy-muted);font-weight:600}
+.slicer .s-val{font-size:14px;font-weight:600;display:flex;justify-content:space-between;gap:8px}
+.slicer .s-val::after{content:"▾";color:var(--value)}
+.slicer .menu{position:absolute;z-index:20;left:-1px;right:-1px;top:100%;background:#fff;border:1px solid #bdbdbd;box-shadow:0 6px 18px rgba(0,0,0,.25);max-height:320px;overflow:auto;padding:4px 0}
+.slicer label{display:flex;gap:10px;align-items:center;padding:8px 12px;min-height:40px;font-size:14px;cursor:pointer}
+.slicer label:hover{background:var(--row)}
+.slicer input{accent-color:var(--orange);width:18px;height:18px}
+.slicer .menu .all{border-bottom:1px solid var(--border);font-weight:600}
+
+.kpi-strip{flex:1;display:grid;grid-template-columns:repeat(3,minmax(140px,1fr));gap:12px;min-width:420px}
+.kpi{background:var(--surface);border:1px solid var(--border);padding:8px 14px;display:flex;flex-direction:column;justify-content:center}
+.kpi .v{font-size:26px;font-weight:700;color:var(--ink);line-height:32px}
+.kpi .l{font-size:12px;color:var(--navy-muted)}
+.kpi .bar{height:4px;background:#eee;margin-top:6px}.kpi .bar span{display:block;height:4px;background:var(--orange)}
+
+.region-band{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.band-label{color:#fff;font-weight:700;font-size:19px;margin-right:4px}
+.region-buttons{display:flex;gap:6px;flex-wrap:wrap;flex:1}
+.region-buttons button,.clear{min-height:44px;padding:0 14px;border:1px solid var(--border);background:#fff;color:var(--ink);font-size:14px;cursor:pointer}
+.region-buttons button[aria-pressed="true"]{background:var(--orange);border-color:var(--orange);font-weight:700}
+.clear{background:var(--charcoal);color:#fff;border-color:var(--charcoal);font-weight:600}
+
+/* content bands */
+.row{display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start}
+.visual{background:var(--surface);border:1px solid var(--border);padding:12px 16px 16px;min-width:0}
+.visual.table-v{border-radius:6px}
+.visual h2{margin:0 0 4px;font-size:20px;font-weight:400;color:var(--navy);line-height:26px}
+.visual .sub{font-size:12px;color:var(--navy-muted);margin:0 0 10px}
+.grow{flex:1 1 640px}.side{flex:0 1 320px}
+.scroll{overflow-x:auto}
+
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{padding:7px 8px;text-align:right;white-space:nowrap;border-bottom:1px solid #eee}
+th:first-child,td:first-child{text-align:left}
+thead th{background:var(--orange);color:var(--ink);font-weight:700;font-size:13px}
+thead tr.q th{background:#c95a2b;color:#fff;font-size:12px;font-weight:600}
+thead th.tgt,td.tgt{background:#f1efed;color:var(--ink)}
+thead th.tgt{background:#d7d3cf}
+td{color:var(--value)}
+td:first-child{color:var(--ink);font-weight:600}
+td.below{background:var(--below);color:var(--ink);font-weight:700}
+td.ok{color:var(--ink);font-weight:600}
+tbody tr:hover td{background:#f7f3ef}
+tbody tr:hover td.below{background:#f6cfb9}
+tr.total td{border-top:2px solid var(--ink);font-weight:700;color:var(--ink)}
+th.prod{white-space:normal;min-width:84px;max-width:110px;text-align:center;vertical-align:bottom;line-height:15px}
+.legend{display:flex;gap:16px;font-size:12px;color:var(--navy);margin:0 0 6px;flex-wrap:wrap}
+.legend i{display:inline-block;width:14px;height:10px;margin-right:6px;vertical-align:middle}
+.empty{color:var(--value);font-size:14px;padding:16px 0}
+svg text{font-family:var(--font)}
+.loading{color:#fff;padding:40px 16px}
+
+.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:#cfcfcf;font-size:12px;padding:16px 4px 0}
+
+@media (max-width:760px){
+  .app{padding:0 8px 16px}
+  .head{flex-wrap:wrap}
+  .page-title{font-size:24px}.report-name{font-size:20px}
+  .brand-logos{order:3;flex-basis:100%;justify-content:flex-start}
+  .kpi-strip{min-width:0;grid-template-columns:1fr 1fr 1fr}
+  .slicer{width:100%}.slicers{width:100%}
+  .kpi .v{font-size:20px}
+}
+@media print{.tabs,.region-band .clear{display:none}}

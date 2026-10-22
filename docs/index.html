@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Duracell KPI | Meridian Group</title>
+<link rel="icon" href="assets/meridian-logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <nav class="tabs" id="tabs" aria-label="Report pages"></nav>
+
+  <header class="head">
+    <img class="logo" src="assets/meridian-logo.png" alt="Meridian Group">
+    <div class="title">
+      <span class="page-title" id="pageTitle">EXECUTIVE SUMMARY</span>
+      <span class="sep">|</span>
+      <span class="report-name">Duracell KPI</span>
+    </div>
+    <div class="brand-logos" id="brandLogos"></div>
+    <div class="date-card">
+      <span class="lbl">LAST DATA DATE</span>
+      <span class="val" id="lastDate">–</span>
+    </div>
+  </header>
+
+  <section class="band slicer-band">
+    <div class="slicers">
+      <div class="slicer" data-dim="channel"></div>
+      <div class="slicer" data-dim="division"></div>
+      <div class="slicer" data-dim="month"></div>
+    </div>
+    <div class="kpi-strip" id="kpiStrip"></div>
+  </section>
+
+  <section class="band region-band">
+    <span class="band-label">Region</span>
+    <div class="region-buttons" id="regions"></div>
+    <button type="button" class="clear" id="clearAll">Clear filters</button>
+  </section>
+
+  <main id="content"><p class="loading">Loading report data…</p></main>
+
+  <footer class="foot">
+    <span id="footNote"></span>
+    <span>Meridian Group · Integrity · Innovation · Resilience · Commitment</span>
+  </footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

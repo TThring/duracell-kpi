@@ -1,0 +1,9 @@
+{
+  "form_report_glob": "source_data/Form Report*.xlsx",
+  "kpi_store_list": "source_data/KPI Store List.xlsx",
+  "cleaned_store_list": "source_data/Cleaned Store List.xlsx",
+  "spar_sales": "source_data/Spar Sales 4 Distr.xlsx",
+  "inventory_glob": "source_data/inventory/Inventory Duracell*.xlsx",
+  "inventory_history": "",
+  "stockfix_product_map": "builder/reference/stockfix_product_map.csv"
+}

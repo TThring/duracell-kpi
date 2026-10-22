@@ -1,0 +1,8 @@
+# Raw Excel files stay on your computer – they contain staff names and e-mails.
+source_data/
+*.xlsx
+*.xls
+*.pbix
+*.csv.gz
+__pycache__/
+.DS_Store
